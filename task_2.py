@@ -15,7 +15,7 @@ f = np.array([-8., -1., 0., 1., 8.])
 a = np.linalg.solve(x, f)
 print("a_k =", a)
 
-x0 = np.array([0., 0.5, 1., 1.5, 2.])
+x0 = np.array([-2., -1.5, -1., -0.5, 0., 1., 2.])
 for i in range(len(x0)):
     Px = polynom(x0[i], f, a)
     print("P(" + str(x0[i]) + ") = " + str(Px))
