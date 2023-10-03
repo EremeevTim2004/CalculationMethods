@@ -1,7 +1,7 @@
 import numpy as np
 
-x = np.array([0, 1, 2, 3])
-f = np.array([2, 3, 10, 29])
+x = np.array([-1, 0, 1, 2])
+f = np.array([-1, 0, 1, 8])
 
 def optKoef(x, i):
     h = x[i] - x[i-1]

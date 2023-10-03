@@ -6,10 +6,14 @@ def polynom(x, f, a):
         Px += (x ** i) * a[i]
     return Px
 
-x = np.array([[1., 0., 0.], [1., 1., 1.], [1., 2., 4.]])
-f = np.array([0., 1., 8.])
+x = np.array([[16., -8., 4., -2., 1.]
+            , [1., -1., 1., -1., 1.]
+            , [0., 0., 0., 0., 1.]
+            , [1., 1., 1., 1., 1.]
+            , [16., 8., 4., 2., 1.]])
+f = np.array([-8., -1., 0., 1., 8.])
 a = np.linalg.solve(x, f)
-print("ai =", a)
+print("a_k =", a)
 
 x0 = np.array([0., 0.5, 1., 1.5, 2.])
 for i in range(len(x0)):

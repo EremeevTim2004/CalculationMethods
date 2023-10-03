@@ -23,13 +23,13 @@ def newton(x_true, y_true, x0):
     result = lstR[0]
     for i in range(1, len(lstR)):
         p = lstR[i]
-        for j in range(i): p *= (x0 - x_in[j])
+        for j in range(i): p *= (x0 - x_in[j]);
         result += p
     return result
 
 rr = getRazn(x_in, f_in)
 print('Table:')
-rnp = np.array([rr[0], rr[1], rr[2], rr[3]])
+rnp = np.array([rr[0], rr[1], rr[2], rr[3], rr[4]])
 print(rnp)
 print()
 

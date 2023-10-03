@@ -1,8 +1,9 @@
 #include <iostream>
 #include "math.h"
+
 using namespace std;
 
-function(const int x)
+void function(const int x)
 {
 	int count = 1;
 	if (x == 0) std::cout << 0 << "\t\t";
@@ -42,16 +43,13 @@ void printer(const int lBorder, const int rBorder, const int rate)
 
 	int* counts = new int[(int)((rBorder - lBorder + 1) / rate)];
 	
-	for (int i = lBorder; i <= rBorder; i += rate)
-		std::cout << i << "\t\t";
+	for (int i = lBorder; i <= rBorder; i += rate) std::cout << i << "\t\t";
 	std::cout << std::endl;
 	
-	for (int i = lBorder, j = 0; j <= rBorder; i += rate, j ++)
-		counts[j] = function(i);
+	for (int i = lBorder, j = 0; j <= rBorder; i += rate, j ++) counts[j] = function(i);
 	std::cout << std::endl;
 	
-	for (int i = 0; i < (int)((rBorder - lBorder + 1) / rate); i ++)
-		std::cout << counts[i] << "\t\t";
+	for (int i = 0; i < (int)((rBorder - lBorder + 1) / rate); i ++) std::cout << counts[i] << "\t\t";
 	std::cout << std::endl;
 }
 
@@ -63,8 +61,10 @@ int main()
 
 	std::cout << "Input left side." << std::endl << ">>";
 	std::cin >> left;
+	
 	std::cout << "Input right side." << std::endl << ">>";
 	std::cin >> rigth;
+
 	std::cout << "Input rate." << std::endl << ">>";
 	std::cin >> rate;
 
